@@ -2,10 +2,10 @@
 <html lang="{{ DEFAULT_LANG }}">
 <head>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" type="text/css" href="file:///Users/felipecruz/Projects/loogica/blog/output/theme/css/style.css">
-	<link rel="stylesheet" type="text/css" href="file:///Users/felipecruz/Projects/loogica/blog/output/theme/css/pygments.css">
+  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}theme/css/style.css">
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}theme/css/pygments.css">
 
-	<link href="file:///Users/felipecruz/Projects/loogica/blog/output/theme/css/font-awesome/font-awesome.css" rel="stylesheet">
+	<link href="{{ STATIC_URL }}theme/css/font-awesome/font-awesome.css" rel="stylesheet">
 	<!--[if IE 7]>
 		<link href="css/font-awesome/font-awesome-ie7.css" rel="stylesheet">
 	<![endif]-->
@@ -32,7 +32,7 @@
 <body>
 	<section id="sidebar">
 		<figure id="user_logo">
-    <a href="."><div class="logo"><img src="http://loogica.net/img/logo.png"></div></a>
+    <a href="{{ SITEURL }}"><div class="logo"><img src="http://loogica.net/img/logo.png"></div></a>
 		</figure>
 
 		<div class="user_meta">
