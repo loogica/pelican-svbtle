@@ -1,11 +1,18 @@
 {% extends "base.html" %}
-{% block content %}
-<h1>Archives for {{ SITENAME }}</h1>
 
-<dl>
-{% for article in dates %}
+{% block title %}Histórico{%endblock%}
+
+{% block content %}
+  <header>
+    <h3>
+     Histórico - {{ SITENAME }}
+    </h3>
+  </header>
+  <h1>Histórico</h1>
+  <dl class="archives">
+  {% for article in dates %}
     <dt>{{ article.locale_date }}</dt>
     <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
-{% endfor %}
-</dl>
+  {% endfor %}
+  </dl>
 {% endblock %}

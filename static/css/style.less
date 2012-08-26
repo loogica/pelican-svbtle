@@ -18,12 +18,14 @@ html {
 	overflow-y: scroll;
 }
 
+
+
 body {
 	margin: 0;
 	padding: 0;
 	background-color: @white;
 	color: @dark-grey;
-	font-family: 'Proxima Nova', 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 13px;
 	line-height: 16px;
 	-webkit-font-smoothing: subpixel-antialiased;
@@ -32,7 +34,6 @@ body {
 a {
 	color: @black;
 	text-decoration: none;
-	border-bottom: 1px dotted @med-grey;
 	&:link {
 		color: @black;
 	}
@@ -53,12 +54,6 @@ a {
 	background-clip: padding-box;
 	-moz-background-clip: padding;
 	-webkit-background-clip: padding-box;
-}
-
-.border-radius (@radius: 5px) {
-	border-radius: @radius;
-	-moz-border-radius: @radius;
-	-webkit-border-radius: @radius;
 }
 
 .box-shadow() {
@@ -93,12 +88,15 @@ section#sidebar {
 	z-index: 0;
 
 	figure {
-		margin: 40px 40px;
+		margin: 40px 80px;
 		width: 100px;
 		height: 100px;
 	}
 
 	.user_meta {
+        font-weight: 200;
+        line-height: 27px;
+        text-rendering: optimizelegibility;
 	}
 
 	h1 {
@@ -122,6 +120,51 @@ section#sidebar {
 		line-height: 20px;
 	}
 
+    .social-networks {
+		margin: 25px 0 0 0;
+		padding: 0 0 0 50px;
+    }
+
+    .social {
+        font-family: 'Open Sans', sans-serif;
+        display:inline-block;
+        padding:4px 0 0 0;
+        font-size:22px;
+        border-radius:50%;
+        -moz-border-radius:50%;
+        -webkit-border-radius:50%;
+        text-align:center;
+        width:32px;
+        height:30px;
+        line-height:24px;
+        text-decoration:none;
+        color:#E42217;
+        -webkit-transition:all 0.3s;
+        -moz-transition:all 0.3s;
+        -o-transition:all 0.3s;
+        -ms-transition:all 0.3s;
+        transition:all 0.3s;
+
+        &:hover {
+            background:#000;
+            color:#fff;
+        }
+    }
+
+    .icon-github {
+        border:3px solid #FD4131;
+    }
+    .icon-github:hover {
+        background:#A9CF54
+    }
+
+    .icon-twitter {
+        border: 3px solid #FD4131;
+    }
+    .icon-twitter:hover {
+        background:#31CDFD;
+    }
+
 	ul {
 		margin: 50px 0 0 0;
 		padding: 0 0 0 40px;
@@ -139,8 +182,6 @@ section#sidebar {
 			color: @med-grey;
 			font-size: 15px;
 			line-height: 19px;
-			border: 2px solid @light-grey;
-			.border-radius(35px);
 			padding: 7px 15px;
 		}
 	}
@@ -171,6 +212,10 @@ section#posts {
 	background-color: rgba(255,255,255,.9);
 	position: relative;
 	z-index: 1;
+
+    font-weight: 200;
+    line-height: 27px;
+    text-rendering: optimizelegibility;
 
 	h1 {
 		margin: 24px 0 16px;
@@ -217,13 +262,19 @@ section#posts {
 		}
 
 		pre {
-			width: 517px;
+			/* width: 517px; */
 		}
 
 		/*li:before {*/
 			/*content: "\00BB \0020";*/
 		/*}*/
 	}
+
+    .page {
+        font-weight: 200;
+        line-height: 27px;
+        text-rendering: optimizelegibility;
+    }
 
 	p {
 		width: 600px;
@@ -254,7 +305,7 @@ section#posts {
 		margin: 0;
 		padding: 0 0 0 20px;
 		display: inline-block;
-		border-left: 10px solid @accent;
+		border-left: 0px solid @accent;
 		width: 550px;
 
 		color: @black;
@@ -274,8 +325,8 @@ section#posts {
 
 	header {
 		margin: 0;
-		padding: 40px 40px 40px 50px;
-		border-bottom: @light-grey 1px solid;
+		padding: 20px 40px 0px 50px;
+		border-bottom: @light-grey 0px solid;
 		font-color: @black;
 		font-weight: 300;
 		text-transform: uppercase;
@@ -316,8 +367,6 @@ section#posts {
 		margin: 40px 50px;
 		padding: 10px 20px;
 		display: inline-block;
-		border: 3px solid @accent;
-		.border-radius(70px);
 		text-transform: uppercase;
 		color: @accent;
 		font-size: 17px;
@@ -392,20 +441,20 @@ section#posts {
 	}
 
 	dl#tag_list {
-			margin: 0;
-			padding: 40px 40px 40px 50px;
-			font-size: 14px;
-			line-height: 18px;
-			ul {
-				margin: 0;
-				padding: 0;
-				li {
-					margin: 0;
-					padding: 0;
+        margin: 0;
+        padding: 40px 40px 40px 50px;
+        font-size: 14px;
+        line-height: 18px;
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                margin: 0;
+                padding: 0;
 
-				}
-			}
-		}
+            }
+        }
+    }
 
 	dl {
 		margin: 0;
@@ -422,11 +471,15 @@ section#posts {
 
 			li {
 				margin: 0 0 0px;
-				padding: 0 0 50px 50px;
-				border-bottom: @light-grey 1px solid;
+				padding: 0 0 0px 50px;
+				border-bottom: @light-grey 0px solid;
 			}
 
 			.title {
+                font-weight: 200;
+                line-height: 27px;
+                text-rendering: optimizelegibility;
+
 				margin: 76px 0 0;
 				padding: 0;
 				color: @black;
@@ -450,4 +503,8 @@ section#posts {
 			}
 		}
 	}
+
+    dl.archives {
+        margin-left: 50px;
+    }
 }
